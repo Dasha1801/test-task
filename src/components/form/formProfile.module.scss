@@ -1,0 +1,16 @@
+@import "../../index.scss";
+
+.form {
+  width: 438px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .fields {
+    width: 100%;
+    border: 1px solid $cardBg;
+    border-radius: 8px;
+    padding: 20px 6px 19px 12px;
+    margin-bottom: 10px;
+  }
+}

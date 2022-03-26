@@ -1,0 +1,23 @@
+@import "../../../index.scss";
+
+.wrapperLabel {
+  .label {
+    font-size: 8px;
+    line-height: 9px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textarea {
+    max-width: 420px;
+    height: 55px;
+    margin-top: 3px;
+    padding: 5px 10px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 1px solid $fieldBorderColor;
+    border-radius: $borderRadius;
+    color: $inputColor;
+    outline: none;
+  }
+}
