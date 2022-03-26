@@ -1,5 +1,5 @@
+import { FieldHookConfig, useField } from "formik";
 import React from "react";
-import { useField, FieldHookConfig } from "formik";
 import { ITextField } from "../../shared/interfaces";
 import styles from "./input.module.scss";
 
@@ -20,9 +20,7 @@ function Input({
           readOnly={readOnly}
           style={{
             color: readOnly ? "#0000004d" : "#000",
-            // border: field.value.length
-            //   ? "1px solid #d8d8d8"
-            //   : "1px solid d91313",
+            border: field.value ? "1px solid #d8d8d8" : "1px solid #d91313",
           }}
         />
       </label>

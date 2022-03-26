@@ -20,7 +20,7 @@ function UserList(): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       getUsers();
-    }, 1500);
+    }, 1000);
   }, [getUsers]);
 
   const renderCards = useCallback(
