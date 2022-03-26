@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { fetchUsers } from "../../api";
 import { IUserCard } from "../shared/interfaces";
+import Spinner from "../spinner/spinner";
 import UserCard from "../userCard/userCard";
 import styles from "./userList.module.scss";
 
@@ -13,7 +14,9 @@ function UserList(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    getUsers();
+    setTimeout(() => {
+      getUsers();
+    }, 1500);
   }, [getUsers]);
 
   const renderCards = (arr: IUserCard[]): JSX.Element[] | null => {
@@ -24,9 +27,17 @@ function UserList(): JSX.Element {
 
   return (
     <main className={styles.main}>
-      <h2 className={styles.title}>Список пользователей</h2>
-      {renderCards(userList)}
-      <h6 className={styles.countUser}>Найдено 10 пользователей</h6>
+      {userList.length ? (
+        <>
+          <h2 className={styles.title}>Список пользователей</h2>
+          {renderCards(userList)}
+          <h6 className={styles.countUser}>
+            Найдено {userList.length} пользователей
+          </h6>
+        </>
+      ) : (
+        <Spinner />
+      )}
     </main>
   );
 }
