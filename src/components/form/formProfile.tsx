@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Formik } from "formik";
 import Input from "./input/input";
+import { validate } from "./validate";
 import styles from "./formProfile.module.scss";
 import { useSelector } from "react-redux";
 import { TStore } from "../../redux";
@@ -26,6 +27,7 @@ function FormProfile({ isReadOnly }: IPropsForm): JSX.Element {
         website,
         comment: "",
       }}
+      validationSchema={validate}
       onSubmit={(values) => {
         console.log(JSON.stringify(values));
       }}
@@ -46,7 +48,6 @@ function FormProfile({ isReadOnly }: IPropsForm): JSX.Element {
           <BaseBtn
             text="Отправить"
             background={isReadOnly ? "#afafaf" : "#52cf4f"}
-            disabled={isReadOnly}
           />
         </Form>
       )}

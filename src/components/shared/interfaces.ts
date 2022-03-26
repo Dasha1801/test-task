@@ -1,7 +1,6 @@
 export interface IPropsBtn {
   text: string;
   background: string;
-  disabled?: boolean;
   onClick?: () => void;
 }
 
