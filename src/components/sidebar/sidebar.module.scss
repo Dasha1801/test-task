@@ -1,0 +1,11 @@
+@import "../../index.scss";
+
+.sidebar {
+  background-color: $sidebarBg;
+  width: 152px;
+  padding: 35px 20px;
+
+  .title {
+    margin-bottom: 10px;
+  }
+}

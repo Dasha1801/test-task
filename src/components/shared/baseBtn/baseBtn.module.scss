@@ -1,0 +1,9 @@
+@import "../../../index.scss";
+
+.baseButton {
+  color: $btnColor;
+  border-radius: $borderRadius;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

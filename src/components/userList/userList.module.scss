@@ -1,0 +1,19 @@
+@import "../../index.scss";
+
+.main {
+  width: 513px;
+  padding: 19px 59px 25px 34px;
+  background-color: $mainBg;
+
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+
+  .countUser {
+    margin-left: auto;
+    padding-top: 10px;
+    width: 155px;
+  }
+}

@@ -1,0 +1,1 @@
+export const sorting = ['по городу','по компании'];
