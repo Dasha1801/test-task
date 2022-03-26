@@ -1,6 +1,7 @@
 export interface IPropsBtn {
   text: string;
   background: string;
+  onClick?: () => void;
 }
 
 export interface IUserCard {
